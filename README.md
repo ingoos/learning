@@ -7,3 +7,6 @@ for i in a:
 ```
 
 새로운것들을 발견하면 이어서 써봐야겠다.
+
+
+https://ericnjennifer.github.io/python_basic/2017/12/28/PythonBasic_Chapt8.html
