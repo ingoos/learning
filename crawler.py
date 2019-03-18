@@ -11,8 +11,8 @@ def spider(max_pages):
         plain_text = source_code.text
         soup = BeautifulSoup(plain_text, 'lxml')
         page += 1
-    print(soup)
+        print(soup)
     
-    #print(soup)
+    
 
 spider(2)
