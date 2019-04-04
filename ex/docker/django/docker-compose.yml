@@ -1,0 +1,14 @@
+version : '2'
+services: # docker-compose 에서 컨테이너(service) 단위를 묶음
+  web: # 앱 service 이름
+    build:
+      dockerfile : Dockerfile # 빌드할 Docker 파일 위치
+
+    command: python manage.py runserver 0.0.0.0:8000 # docker-compose up 을 command 창에 입력하면 실행할 명령어
+    volumes: # 로컬 폴더(.)와 docker 의 /code 폴더를 마운트(연결)
+      - .:/django
+    ports: # docker 와 로컬에서 서로 입력 출력할 포트, 접근할 포트
+      - "8000:8000"
+    env: # docker 내에서 필요한 환경변수 설정
+      #- SECRET_KEY='abcabc'
+      - DB_NAME='db'
