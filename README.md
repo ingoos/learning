@@ -13,3 +13,7 @@ https://ericnjennifer.github.io/python_basic/2017/12/28/PythonBasic_Chapt8.html
 
 Crawler
 https://creativeworks.tistory.com/entry/PYTHON-3-Tutorials-24-%EC%9B%B9-%ED%81%AC%EB%A1%A4%EB%9F%AClike-Google-%EB%A7%8C%EB%93%A4%EA%B8%B0-1-How-to-build-a-web-crawler
+
+Docker
+https://subicura.com/2017/01/19/docker-guide-for-beginners-2.html
+도커를 통해 서버환경을 구축하는 연습 
