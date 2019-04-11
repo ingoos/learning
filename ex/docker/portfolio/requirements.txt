@@ -1,0 +1,6 @@
+Django==2.2
+gistory==0.44
+gunicorn==19.9.0
+pytz==2018.9
+six==1.12.0
+sqlparse==0.3.0

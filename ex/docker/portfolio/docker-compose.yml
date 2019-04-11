@@ -1,0 +1,20 @@
+version : '2'
+services: # docker-compose 에서 컨테이너(service) 단위를 묶음
+  nginx:
+    image: nginx:latest
+    ports: 
+      - "80:80"
+    volumes: 
+      - .:/portfolio
+      - .:/config/nginx:/etc/nginx.conf.d
+    depends_on:
+      - web
+  web: # 앱 service 이름
+    build:
+      context: .
+      dockerfile : Dockerfile # 빌드할 Docker 파일 위치
+    command: gunicorn portfolio.wsgi:application --bind 0.0.0.0:8000
+    volumes: # 로컬 폴더(.)와 docker 의 /code 폴더를 마운트(연결)
+      - .:/portfolio
+    expose: # docker 와 로컬에서 서로 입력 출력할 포트, 접근할 포트
+      - "8000"
