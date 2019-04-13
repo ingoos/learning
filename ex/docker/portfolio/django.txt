@@ -1,0 +1,109 @@
+오늘 처음을 Youtube 를 통해서 배움을 가져봤다.
+
+오늘 내가 배운 내용을 정리해볼려고 한다.
+
+처음에는 Youtube 보기전에는 Google 에서 검색해서 찾아봤지만.
+
+봐도 잘 몰라서 영상을 통해서 해보자 라는 생각을 가지게 되었고 처음으로 개발적인 지식을 youtube 에서 검색해봤다.
+
+맨위에 나오는 정보가있는데. 보자마자 이해해버렸다. 20분짜리였다.
+
+거기서 설명하는 내용은 
+
+Django 는 기본적으로 한개의 Project 안에서 여러개의 App 으로 구성되어. 실행 된다고 설명하였다.
+
+나는 Project 하나만있으면 되는줄알았지만. 아니였던것이였다..
+
+그런 개념이없이 시작할려고하니 당연히 여러운건 사실이다.
+
+그리고 Project 에서 생성되는 파일에 대한 설명을 시작했다.
+
+처음엔 
+
+WSGI 에 대해서다. 실제로 서버를 운영할때는 DJango 로만은 힘들고
+
+Webserver ( nginx or Apache) 같은 웹서버와 함께 사용해야한다. 
+
+고로 WSGI 와 WebServer ( midleware ) Connection 즉 연결해주는 파일 이다. 특별히 만질건 없다고한다.
+
+아직해본적은없지만. 나중에 실제로 아마존 서비스에 올릴때 사용해봐야겠다 는 생각을했고. 이걸 모르고 접근하면 또 어려웠겠지? 라는 생각을했다.
+
+그다음엔
+
+Settings.py 에 대해서다.
+
+처음 프로젝트 를 생성하면 해당 프로젝트에대한 기본 셋팅값을 설정하는 곳이라고 했다.
+
+주로 자주사용하는 설정값은
+
+DEBUG - 개발시 오류메시지를 출력해준다고한다. 실제로 운영할때는 FALSE 를 바꾼다음에 사용해야한다.
+
+installed_app - pip 등 python libray 를 사용한다고 정의할때 넣는 공간이다. 
+
+templates - View 파일에대한 정보를 ..??
+
+database - DBMS 에대한 설정을 할수있다고한다.
+ 
+static_url - static 파일 ( CSS, Javascript 등 모든앱의 동적인 파일을 모아준다고 한다.)
+
+등이있었다.
+
+그다음엔
+
+manage.py 에 대해서였다.
+
+자주쓰는것 위주로 설명해주셨다.
+
+startapp - 앱을 생성할때 사용한다. ( 이걸몰랐기 떄문에 어려웠다.)
+           ex) python3 manage.py startapp [appName]
+runserver - django 실행할때 사용한다. 이후 추가옵션은있지만 사용방법은 
+            ex) python3 manage.py runserver 0:8000
+
+collectstatic - static 파일을 생성해준다. (CSS, JavaScript)
+
+
+----------------------------------------------------------------------
+
+앱 성성 후 작업 해야할 work list
+
+Project 
+
+1. Settings.py
+
+INSTALLED_APPS 에서 앱 추가해주기.
+ex) blog 앱을 생성했으면 blog를 입력해준다.
+    INSTALLED_APPS = [...,
+                  'blog']
+
+TEMPLATES 에서 내용 추가하기
+ 'DIRS': [os.path.join(BASE_DIR, 'templates')],
+
+STATIC_ROOT 내용 추가하기
+ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+2. urls.py
+
+APP 에 있는 ulrs.py 매칭하기 위해서 urlpatterns 추가해준다. 
+ex ) path('', include('[appName].urls')),
+
+이후 include 함수를 사용하기에 import 수정이 필요하다.
+ex ) from django.urls import include, path
+
+APP
+
+1. templates 폴더 생성하기
+   ex) APP/templates/[appName]
+
+2. urls.py 파일을 생성한다.
+
+3. static/[appName] 폴더를 생성한다.
+
+
+
+
+
+
+
+
+
+

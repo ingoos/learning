@@ -1,0 +1,29 @@
+*{ margin:0; padding:0; }
+ul,li{ list-style:none; }
+a{ text-decoration:none; }
+
+/* default setting */
+#wrap{ width:100%; }
+
+/* header */
+#header{ position:absolute; top:0px; width:100%; padding-top:40px; }
+#header a { color:#fff; }
+#header > #logoArea{ float:left; padding-left:60px; }
+#header > #logoArea > h1 { font-size:3.8em; }
+#header > #mainCategory{ float:right; margin: 0px 90px 0px 0px; }
+#header > #mainCategory > ul > li{ float:left; margin:0 30px 0 0; }
+
+/* main_visual */
+#mainVisual{ width:100%; }
+#mainVisual>img{ width:100%; }
+
+/* contents */
+#contents { width:100%; padding: 40px; }
+#contents > #mainProduct{float:left; width:65%; }
+#contents > #workCOntent{float:right; width:35%;}
+#contents > #accountInfo{clear:both; width:100%;}
+
+/* footer */
+#footer{ background:#333; color:#fff; }
+
+.white{ color:#fff; }

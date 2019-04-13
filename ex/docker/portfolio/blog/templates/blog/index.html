@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>잉구 포트폴리오에 오신 것을 환영합니다.</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/main.css' %}" />
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div id="logoArea">
+                <h1><a href="#">잉구</a></h1>
+            </div>
+            <div id="mainCategory">
+                <ul>
+                    <li><a href="#">프로필</a></li>
+                    <li><a href="#">스터디일기</a></li>
+                    <li><a href="#">학습</a></li>
+                    <li><a href="#">작업리스트</a></li>
+                    <li class="white">|</li>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">사이트맵</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="mainVisual">
+            <img src="{% static 'blog/images/main_visual1.jpg' %}" alt="intro" >
+        </div>
+
+        <div id="contents">
+            <div id="mainProduct">
+                <h2>PR</h2>
+                나의 소개입니다. 나는 곽인구입니다. 
+                1991년 4월 27일 생 
+                저의 직업은 저도 잘모르겠습니다. 너무 이것저것 해왔는지.
+                인생의 한탄도 있네여 다른분들은 도움이될거다. 라고하고 어떤분은 
+                한가지일만 꾸준히 하라고 하네여 뭐가 정답인지 모르겠습니다.
+                정답대로 살았다면 저는 대학교를 가야했고 일찍 군대를 다녀와 이쁜 여자친구를 사귀면서
+                매달 적금을 꾸준히하며 살아야겠지요. 물론 착실하게 살아야 하는것은 맞지만.
+                사는게 정답이있는지 잘모르겠습니다. 한번사는것에 대한 오늘은 다시는 오지않기에
+                하루 하루에 대한 최선과 열정을 다하여 만족하며 살면 되지않을까 라고 생각합니다.
+            </div>
+            <div id="workContent">
+                <h2>Work Content</h2>
+                <ul>
+                    <li><a href="#"><span class="workImage">images</span><span class="workTitle">project 1</span></a></li>
+                    <li><a href="#"><span class="workImage">images</span><span class="workTitle">project 2</span></a></li>
+                    <li><a href="#"><span class="workImage">images</span><span class="workTitle">project 3</span></a></li>
+                    <li><a href="#"><span class="workImage">images</span><span class="workTitle">project 4</span></a></li>
+                    <li><a href="#"><span class="workImage">images</span><span class="workTitle">project 4</span></a></li>
+                </ul>
+            </div>
+            <div id="accountInfo">
+                instagram facebook github kakaotalk
+            </div>
+        </div>
+
+        <div id="footer">
+            copyright &copy; All right reserved
+        </div>
+    </div>
+</body>
+</html>
